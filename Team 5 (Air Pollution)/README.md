@@ -19,8 +19,8 @@
 
 Here are some glimpses from the project:
 
-![Finding Correlation between parameters](/home/sandesh/open_data_hackathon/screenshots/correlation.png)
+![Finding Correlation between parameters](screenshots/correlation.png)
 
-![](/home/sandesh/open_data_hackathon/screenshots/heatmap.png)
+![Heatmap in real time map](screenshots/heatmap.png)
 
-![](/home/sandesh/open_data_hackathon/screenshots/infographics.png)
+![Infographics](screenshots/infographics.png)
