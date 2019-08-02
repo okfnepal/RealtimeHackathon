@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>Infograhics dashboard</title>
+        <link rel = 'stylesheet' href = 'bootstrap.css' />
+    </head>
+    <body>
+        <div class = 'heading'>
+            Real time dashboard.
+        </div>
+        <div class = 'wrapper'>
+            <div class = 'left'>
+                Graph for PM<sub>2.5</sub> levels versus time:                  
+            </div>
+            <div class ='right'>
+                <div class = 'controls'>
+                    Today's weather forecast: <br />
+                    <div class = 'weather_out'>
+                        
+                    </div>
+                    <script>
+                        var out = document.querySelector(".weather_out");
+                        fetch("api.openweathermap.com", (data)=>{
+                            console.log(data);
+                        })
+                    </script>
+                </div>
+                <div class = 'outputs'>
+                    output infographics.
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+        }
+        .wrapper .left{
+            flex: 1;
+        }
+        .wrapper .right{
+            flex: 1;
+        }
+        .heading{
+            font-family: sans-serif;
+            color: white;
+            height: 40px;
+            padding-left: 30px;
+            line-height: 40px;
+            background: linear-gradient(#00a1ff, #0044aa);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+</html>

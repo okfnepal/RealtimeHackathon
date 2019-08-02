@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title> Chart </title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+
+<!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script> -->
+<script src="../static/js/highcharts.js"></script>
+<script src="../static/js/series-label.js"></script>
+<script src="../static/js/exporting.js"></script>
+<script src="../static/js/export-data.js"></script>
+<body>
+<div id="container"></div>
+
+</body>
+<script>
+var title = {{ title|safe }}
+var series = {{ series|safe }}
+var xAxis = {{ xAxis|safe }}
+
+Highcharts.chart('container', {
+  credits: {
+    enabled: false
+  },
+
+    title: title,
+  
+    subtitle: {
+      text: 'Comparison'
+    },
+  
+    yAxis: {
+        labels: {
+            formatter: function() {
+                return this.value;
+            }
+        },
+    },
+    legend: {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle'
+    },
+
+    xAxis: xAxis,    
+    series: series,
+
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 500
+        },
+        chartOptions: {
+          legend: {
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom'
+          }
+        }
+      }]
+    }
+  
+  });
+</script>
+</html>
